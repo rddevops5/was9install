@@ -1,7 +1,8 @@
 ---
 components: ["SDK","WAS9","WASFP09"]
-components_dir: ["DOWNLOAD_MASTER_DIR","WAS9.0_DIR","SDK_DIR","WASFP09_DIR"]
+components_dir: ["WAS9_DIR","SDK_DIR","WASFP9_DIR","IM_DIR"]
 DOWNLOAD_MASTER_DIR: /DevOps_Do_Not_Delete
-WAS9.0_DIR: /DevOps_Do_Not_Delete/WAS9.0/
-SDK_DIR: /DevOps_Do_Not_Delete/SDK/
-WASFP09_DIR: /DevOps_Do_Not_Delete/WASFP09/
+WAS9_DIR: /DevOps_Do_Not_Delete/WAS9
+SDK_DIR: /DevOps_Do_Not_Delete/SDK
+WASFP9_DIR: /DevOps_Do_Not_Delete/WASFP9
+IM_DIR: /tmp/im
