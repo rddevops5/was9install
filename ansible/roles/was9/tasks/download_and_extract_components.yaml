@@ -1,6 +1,7 @@
 ---
-- name: Create directories
-  command: mkdir -p {{item}}
-  with_items:
+- name: "Create Temp directory"
+  file: 
+    path: "{{ item }}"
+    state: directory
+  with_items: 
     - "{{ components_dir }}"
- 
