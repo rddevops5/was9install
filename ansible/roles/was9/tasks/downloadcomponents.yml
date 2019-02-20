@@ -4,4 +4,7 @@
     path: "{{ item }}"
     state: directory
   with_items: 
-    - "{{ components_dir }}"
+    - "{{ WAS9_DIR }}"
+    - "{{ SDK_DIR }}"
+    - "{{ WASFP9_DIR }}"
+    - "{{ IM_DIR }}"
