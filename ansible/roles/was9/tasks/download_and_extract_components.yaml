@@ -1,0 +1,6 @@
+---
+- name: Create directories
+  command: mkdir {{item}}
+  with_items:
+    - "{{ components_dir }}"
+ 

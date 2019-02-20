@@ -1,0 +1,4 @@
+---
+# defaults versions for WAS installation
+ WAS-FP013: ["8.5.5-WS-WAS-FP013-part1.zip","8.5.5-WS-WAS-FP013-part2.zip","8.5.5-WS-WAS-FP013-part3.zip"]
+ IBMWASJAVA: ["8.0.3.20-WS-IBMWASJAVA-part1.zip","8.0.3.20-WS-IBMWASJAVA-part2.zip"]
