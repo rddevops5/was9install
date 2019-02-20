@@ -1,7 +1,7 @@
 ---
 components: ["SDK","WAS9","WASFP9"]
 SDK: ["[download_JAVASDK_url][IBMWASJAVA]"]
-components_dir: ["WAS9_DIR","SDK_DIR","WASFP9_DIR","IM_DIR"]
+componentsdir: ["WAS9_DIR","SDK_DIR","WASFP9_DIR","IM_DIR"]
 DOWNLOAD_MASTER_DIR: /DevOps_Do_Not_Delete
 WAS9_DIR: /DevOps_Do_Not_Delete/WAS9
 SDK_DIR: /DevOps_Do_Not_Delete/SDK
