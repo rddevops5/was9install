@@ -4,4 +4,8 @@
     path: "{{ item }}"
     state: directory
   with_items: 
-    - "{{ components_dir }}"
+    - /DevOps_Do_Not_Delete/IM
+    - /DevOps_Do_Not_Delete/WAS9
+    - /DevOps_Do_Not_Delete/SDK
+    - /DevOps_Do_Not_Delete/FP
+    - /tmp/im
