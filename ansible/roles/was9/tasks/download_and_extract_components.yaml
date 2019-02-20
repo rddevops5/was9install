@@ -1,7 +1,0 @@
----
-- name: "Create Temp directory"
-  file: 
-    path: "{{ item }}"
-    state: directory
-  with_items: 
-    - "{ components_dir }"
