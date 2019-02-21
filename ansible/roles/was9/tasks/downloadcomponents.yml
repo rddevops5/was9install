@@ -1,10 +1,7 @@
 --- 
 - name: "Create Temp directory"
   file: 
-    path: "{{ item }}"
+    path: "{{DEVOPS_BASE_DIR}}/{{item}}"
     state: directory
   with_items: 
-    - "{{ WAS9_DIR }}"
-    - "{{ SDK_DIR }}"
-    - "{{ WASFP9_DIR }}"
-    - "{{ IM_DIR }}"
+    - "{{components_dir }}"
