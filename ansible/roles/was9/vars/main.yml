@@ -2,4 +2,6 @@
 components: ["SDK","WAS9","WASFP9"]
 SDK: ["[download_JAVASDK_url][IBMWASJAVA]"]
 DEVOPS_BASE_DIR: "/DevOps_Do_Not_Delete/"
-components_dir: ["WAS9","SDK","WASFP9","tmp/im"]
+components_dir: ["WAS9","SDK","WASFP9","IAMTemp"]
+IAMTemp: ["tmp/im"]
+
