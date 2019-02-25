@@ -1,5 +1,5 @@
 ---
-- include_vars: vars/myvar.yml
+#- include_vars: vars/myvar.yml
 
 - name: "Create components directories under {{DEVOPS_BASE_DIR}}" 
   file:
