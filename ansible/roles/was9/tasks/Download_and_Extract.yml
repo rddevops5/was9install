@@ -14,7 +14,7 @@
 #    url: "{{SDK_URL}}{{item}}"
 #    dest: "{{DEVOPS_BASE_DIR}}/SDK"
 #  with_items:
-    - "{{SDK_FILES}}"
+#    - "{{SDK_FILES}}"
   
 - name: "Download remaining installer."
   get_url:
