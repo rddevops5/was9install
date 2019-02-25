@@ -1,6 +1,6 @@
 ---
 - name: "Run silent install to {{INSTALL_IIM_DIR}}"
   shell: |
-     '{{imcl}} install com.ibm.java.jdk.v8 -repositories {{DEVOPS_BASE_DIR}}/IM/  -installationDirectory  {{INSTALL_IIM_DIR}} -acceptLicense -sP'
+     '{{imcl}} install com.ibm.java.jdk.v8 -repositories {{DEVOPS_BASE_DIR}}/SDK/  -installationDirectory  {{INSTALL_IIM_DIR}} -acceptLicense -sP'
   register: installSDK             
   changed_when: installSDK.rc != 0  
