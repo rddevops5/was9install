@@ -26,3 +26,5 @@ IM_FILES: "agent.installer.lnx.gtk.x86_64_1.8.5.zip"
 imcl: "{{DEVOPS_BASE_DIR}}/IM/tools/imcl"
 INSTALL_IIM_LOG_FILE: "/tmp/INSTALL_IIM.log"
 INSTALL_IIM_DIR: "{{install_parent_dir}}/IBM/InstallationManager/"
+INSTALL_SDK_DIR: "{{install_parent_dir}}/IBM/WebSphere/AppServer/"
+
