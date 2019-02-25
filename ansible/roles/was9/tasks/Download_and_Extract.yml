@@ -9,12 +9,12 @@
   with_items:
     - "{{all_components}}"
     
-- name: "Download SDK"
-  get_url:
-    url: "{{SDK_URL}}{{item}}"
-    dest: "{{DEVOPS_BASE_DIR}}/SDK"
-  with_items:
-    - "{{SDK_FILES}}"
+#- name: "Download SDK"
+# get_url:
+ #   url: "{{SDK_URL}}{{item}}"
+ #   dest: "{{DEVOPS_BASE_DIR}}/SDK"
+ # with_items:
+ #   - "{{SDK_FILES}}"
   
 - name: "Download remaining installer."
   get_url:
