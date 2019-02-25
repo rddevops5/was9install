@@ -7,3 +7,11 @@ WAS9: /DevOps_Do_Not_Delete/WAS9
 SDK: /DevOps_Do_Not_Delete/SDK
 WASFP9: /DevOps_Do_Not_Delete/WASFP9
 IM: /tmp/im
+
+################URL
+
+SDK_FILES: ["was.repo.9000.java8_part1.zip","was.repo.9000.java8_part2.zip","was.repo.9000.java8_part2.zip"]
+FP_url: https://maven.etb.tieto.com/artifactory/fs-pcm-misc/IBM/AppServer/WebSphere/WAS9.0/FP9/
+IIM_url: https://maven.etb.tieto.com/artifactory/fs-pcm-misc/IBM/AppServer/WebSphere/WAS9.0/IM/{{ zip }}
+SDK_url: https://maven.etb.tieto.com/artifactory/fs-pcm-misc/IBM/AppServer/WebSphere/WAS9.0/SDK/
+WAS_url: https://maven.etb.tieto.com/artifactory/list/fs-pcm-misc/IBM/AppServer/WebSphere/WAS9.0/WAS/
