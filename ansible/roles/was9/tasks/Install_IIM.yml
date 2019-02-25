@@ -1,0 +1,36 @@
+---
+- include_vars: vars/myvar.yml
+
+- name: "Create components directories under {{DEVOPS_BASE_DIR}}" 
+  file:
+    path: "{{install_parent_dir}}/{{item}}"
+    state: directory
+    mode: 0755
+  with_items:
+    - "{{create_dir_during_install}}"
+
+
+- name: "Run slient install for IIM"
+  command: "{{imcl}} install com.ibm.cic.agent -repositories {{DEVOPS_BASE_DIR}}/IM/repository.config -installationDirectory {{INSTALL_IIM_DIR}} -acceptLicense -log {{INSTALL_IIM_LOG_FILE}}"
+  
+    
+- name: "Validate Installation of IIM"
+  command: '{{install_parent_dir}}/IBM/InstallationManager/eclipse/tools/imcl listInstalledPackages'
+  register: RESULT_IIM_INSTALLATION
+  
+- name: "Check IIM Installation Status" 
+  set_fact:
+    IIM_INSTALLATION_STATUS: "{{RESULT_IIM_INSTALLATION.stdout_lines[0]}}"
+
+- name: "Set IIM Presence TRUE/FALSE"
+  set_fact:
+    IIM_INSTALLATION_FLAG: "TRUE"
+  when: IIM_INSTALLATION_STATUS.find("com.ibm.cic.agent") != -1
+  
+- name: "Show value of IIM_INSTALLATION_FLAG"
+  debug:
+    msg: "{{IIM_INSTALLATION_FLAG}}"
+  
+
+
+  

@@ -1,0 +1,40 @@
+---
+- include_vars: vars/myvar.yml
+
+- name: "Create components directories under {{DEVOPS_BASE_DIR}}" 
+  file:
+    path: "{{DEVOPS_BASE_DIR}}/{{item}}"
+    state: directory
+    mode: 0755
+  with_items:
+    - "{{all_components}}"
+    
+- name: "Download SDK"
+  get_url:
+    url: "{{SDK_URL}}{{item}}"
+    dest: "{{DEVOPS_BASE_DIR}}/SDK"
+  with_items:
+    - "{{SDK_FILES}}"
+  
+- name: "Download remaining installer."
+  get_url:
+    url: "{{hostvars[inventory_hostname][item+'_URL']+hostvars[inventory_hostname][item+'_FILES']}}"
+    dest: "{{DEVOPS_BASE_DIR}}/{{item}}"
+  with_items:
+    - "{{base_components}}"
+   
+- name: "extract SDK"
+  unarchive:
+    src: "{{DEVOPS_BASE_DIR}}/SDK/{{item}}"
+    dest: "{{DEVOPS_BASE_DIR}}/SDK"
+    copy: no
+  with_items:
+    - "{{SDK_FILES}}"
+    
+- name: "download & extract remaining installer"
+  unarchive:
+    src: "{{DEVOPS_BASE_DIR}}/{{item}}/{{hostvars[inventory_hostname][item+'_FILES']}}"
+    dest: "{{DEVOPS_BASE_DIR}}/{{item}}"
+    copy: no
+  with_items:
+    - "{{base_components}}"
