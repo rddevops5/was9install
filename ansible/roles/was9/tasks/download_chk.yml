@@ -1,6 +1,6 @@
 ---
 - name: "Check war files in release"
-  local_action: stat path="{{DEVOPS_BASE_DIR}}/SDK/{{item}}"
+  local_action: stat path="/DevOps_Do_Not_Delete/SDK/{{item}}"
   #state: file
   register: result
   #checksum: yes
@@ -14,5 +14,4 @@
     dest: "{{DEVOPS_BASE_DIR}}/SDK"
   with_items:
     - "{{SDK_FILES}}"
-  when: result.stat.exists == True  
-    
+  when: result.stat.exists == False
