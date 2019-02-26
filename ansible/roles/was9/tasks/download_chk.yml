@@ -5,5 +5,5 @@
   register: result
   #checksum: yes
   #archive: no
-  with_items:
+  with_together:
     - "{{SDK_FILES}}"
