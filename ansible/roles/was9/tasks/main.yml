@@ -1,7 +1,7 @@
 ---
 - include_tasks: download_chk.yml
-#- include_tasks: Download_and_Extract.yml
-#  when: result.stat.exists == True
+- include_tasks: Download_and_Extract.yml
+  when: result.stat.exists == True
 #- include: Download_and_Extract.yml
 #- include: Install_IIM.yml
 #- include: Install_SDK.yml
