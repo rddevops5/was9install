@@ -1,9 +1,9 @@
 ---
 - name: "Check war files in release"
   local_action: stat path="{{DEVOPS_BASE_DIR}}/SDK/{{item}}"
-  state: file
+  #state: file
   register: result
-  checksum: yes
+  #checksum: yes
   #archive: no
   with_items:
     - "{{SDK_FILES}}"
