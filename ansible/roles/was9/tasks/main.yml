@@ -1,5 +1,7 @@
 ---
-- include: Download_and_Extract.yml
-- include: Install_IIM.yml
+- include_tasks: Download_and_Extract.yml
+  when: result.stat.exists == False
+#- include: Download_and_Extract.yml
+#- include: Install_IIM.yml
 #- include: Install_SDK.yml
 
