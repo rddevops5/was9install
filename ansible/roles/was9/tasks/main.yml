@@ -1,5 +1,5 @@
 ---
-#- include: Download_and_Extract.yml
-#- include: Install_IIM.yml
-- include: Install_SDK.yml
+- include: Download_and_Extract.yml
+- include: Install_IIM.yml
+#- include: Install_SDK.yml
 
