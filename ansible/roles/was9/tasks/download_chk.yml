@@ -1,9 +1,6 @@
 ---
-- name: "Check war files in release"
-  local_action: stat path="/DevOps_Do_Not_Delete/SDK/{{item}}"
-  #state: file
+- name: Checking existing file name
+  stat:
+    path: "/DevOps_Do_Not_Delete/SDK/{{item}}"
+  with_items: "{{ SDK_FILES }}"
   register: result
-  #checksum: yes
-  #archive: no
-  with_items:
-    - "{{SDK_FILES}}"

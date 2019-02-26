@@ -15,6 +15,7 @@
     dest: "{{DEVOPS_BASE_DIR}}/SDK"
   with_items:
     - "{{SDK_FILES}}"
+  when: result.stat.exists
   
 - name: "Download remaining installer."
   get_url:
