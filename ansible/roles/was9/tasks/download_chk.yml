@@ -7,11 +7,11 @@
   #archive: no
   with_items:
     - "{{SDK_FILES}}"
-    
+################
 - name: "Download SDK"
   get_url:
-    url: "{{SDK_URL}}{{item}}"
-    dest: "{{DEVOPS_BASE_DIR}}/SDK"
+   url: "{{SDK_URL}}{{item}}"
+   dest: "{{DEVOPS_BASE_DIR}}/SDK"
   with_items:
     - "{{SDK_FILES}}"
   when: result.stat.exists == False
