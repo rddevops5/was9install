@@ -1,6 +1,6 @@
 ---
 - name: Check war files in release
-  local_action: stat path="{{DEVOPS_BASE_DIR}}/{{item}}"
+  local_action: stat path="{{DEVOPS_BASE_DIR}}/SDK/{{item}}"
   register: result
   checksum: yes
    archive: no
