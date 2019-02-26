@@ -1,0 +1,8 @@
+---
+- name: "Create components directories under {{DEVOPS_BASE_DIR}}" 
+  file:
+    path: "{{DEVOPS_BASE_DIR}}/{{item}}"
+    state: directory
+    mode: 0755
+  with_items:
+    - "{{all_components}}"
